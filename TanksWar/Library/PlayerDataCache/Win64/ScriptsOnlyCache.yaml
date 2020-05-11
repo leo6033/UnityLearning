@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraControl
+    - ExitButton
     - GameManager
     - ShellExplosion
     - TankHealth
@@ -23,6 +24,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -30,7 +32,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Tank.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -86,6 +88,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12236}
     - Class: 114
+      Script: {instanceID: 12314}
+    - Class: 114
       Script: {instanceID: 12402}
     - Class: 114
       Script: {instanceID: 12760}
@@ -99,6 +103,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13242}
     - Class: 114
       Script: {instanceID: 13282}
+    - Class: 114
+      Script: {instanceID: 27450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,7 +246,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 373aa9da477be205fd8abdb5b2c1f3af
+      Hash: 484a50cb0f69b22afc47742a006b471e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TankShooting
@@ -498,7 +504,7 @@ ScriptsOnlyBuild:
     className: PostEffectsHelper
   - hash:
       serializedVersion: 2
-      Hash: 4962ea667ee2a27ecf0d681fe49e6067
+      Hash: 231e903c46a88d0ce7c23cb7af459211
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -802,7 +808,19 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TankHealth
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitButton
+  - hash:
+      serializedVersion: 2
+      Hash: ffb88a5b69986916e8af2babb9814e00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseGame
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Tank.unity
   playerPath: "E:/\u8BFE\u5185/\u5927\u4E09\u4E0B/\u52A8\u753B\u4E0E\u6E38\u620F\u7A0B\u5E8F\u8BBE\u8BA1/\u65B0\u5EFA\u6587\u4EF6\u5939/TanksWar.exe"
