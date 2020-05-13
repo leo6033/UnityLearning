@@ -20,6 +20,7 @@ public class TankShooting : MonoBehaviour
     private float m_CurrentLaunchForce;
     private float m_ChargeSpeed;
     private bool m_Fired;
+    private float nextFireTime;
 
     public bool paused = false;
 
@@ -33,7 +34,7 @@ public class TankShooting : MonoBehaviour
     void Start()
     {
         m_FireButton = "Fire" + m_PlayerNumber;
-        m_Fired = true;
+
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
     }
 
@@ -47,7 +48,7 @@ public class TankShooting : MonoBehaviour
             if (m_CurrentLaunchForce >= m_MaxLaunchForce && !m_Fired)
             {
                 m_CurrentLaunchForce = m_MaxLaunchForce;
-                Fire();
+                Fire(m_CurrentLaunchForce, 1);
             }
             else if (Input.GetButtonDown(m_FireButton))
             {
@@ -65,23 +66,27 @@ public class TankShooting : MonoBehaviour
             }
             else if (Input.GetButtonUp(m_FireButton) && !m_Fired)
             {
-                Fire();
+                Fire(m_CurrentLaunchForce, 1);
             }
         }
     }
 
-    private void Fire()
+    public void Fire(float launchForce, float fireRate)
     {
-        m_Fired = true;
+        if (Time.time > nextFireTime)
+        {
+            nextFireTime = Time.time + fireRate;
+            m_Fired = true;
 
-        Rigidbody shellInstance = Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
+            Rigidbody shellInstance = Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
 
-        shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
+            shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
 
-        m_ShootingAudio.clip = m_FireClip;
-        m_ShootingAudio.Play();
+            m_ShootingAudio.clip = m_FireClip;
+            m_ShootingAudio.Play();
 
-        m_CurrentLaunchForce = m_MinLaunchForce;
+            m_CurrentLaunchForce = m_MinLaunchForce;
+        }
 
     }
 

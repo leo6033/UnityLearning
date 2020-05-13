@@ -29,7 +29,7 @@ public class ShellExplosion : MonoBehaviour
             if (!targetRigidbody)
                 continue;
 
-            targetRigidbody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
+            //targetRigidbody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
 
             TankHealth targetHealth = targetRigidbody.GetComponent<TankHealth>();
 
@@ -66,9 +66,4 @@ public class ShellExplosion : MonoBehaviour
         return damage;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

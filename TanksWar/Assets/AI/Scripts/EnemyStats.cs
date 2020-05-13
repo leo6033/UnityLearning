@@ -11,7 +11,7 @@ public class EnemyStats : ScriptableObject
 
     public float attackRange = 1f;
     public float attackRate = 1f;
-    public float accackForce = 15f;
+    public float attackForce = 15f;
     public int attackDamage = 50;
 
     public float searchDuration = 4f;

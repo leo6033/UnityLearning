@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 383806821817027706}
   m_Layer: 8
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -587,6 +587,7 @@ MonoBehaviour:
   m_MinLaunchForce: 15
   m_MaxLaunchForce: 30
   m_MaxChargeTime: 0.75
+  paused: 0
 --- !u!1 &1977945215231287751
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,8 +63,8 @@ public class TankManager
         if (m_Movement != null)
             m_Movement.enabled = false;
 
-        //if (m_StateController != null)
-        //    m_StateController.enabled = false;
+        if (m_StateController != null)
+            m_StateController.enabled = false;
 
         m_Shooting.enabled = false;
 
@@ -76,8 +76,8 @@ public class TankManager
         if (m_Movement != null)
             m_Movement.enabled = true;
 
-        //if (m_StateController != null)
-        //    m_StateController.enabled = true;
+        if (m_StateController != null)
+            m_StateController.enabled = true;
 
         m_Shooting.enabled = true;
 

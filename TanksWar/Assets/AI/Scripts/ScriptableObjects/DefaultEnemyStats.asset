@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba05d5755dc4c2c429d86190af12328a, type: 3}
   m_Name: DefaultEnemyStats
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  lookRange: 80
+  moveSpeed: 20
+  lookRange: 100
   lookSphereCastRadius: 2
   attackRange: 40
   attackRate: 1
-  accackForce: 15
-  attackDamage: 50
+  attackForce: 15
+  attackDamage: 100
   searchDuration: 8
   searchingTurnSpeed: 120

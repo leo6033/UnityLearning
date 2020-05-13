@@ -505,10 +505,13 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: cbe9815208ce8f84abf011d5d24557d3, type: 2}
   enemyStats: {fileID: 11400000, guid: 33130092ca6dac242b34ca7f611b40f1, type: 2}
   eyes: {fileID: 4393609558193071325}
+  remainState: {fileID: 11400000, guid: 027435e73734c194d9853d22eb0a2525, type: 2}
   navMeshAgent: {fileID: 0}
   tankShooting: {fileID: 0}
   wayPointList: []
   nextwayPoint: 0
+  chaseTarget: {fileID: 0}
+  stateTimeElapsed: 0
 --- !u!1 &19323315505526886
 GameObject:
   m_ObjectHideFlags: 0
