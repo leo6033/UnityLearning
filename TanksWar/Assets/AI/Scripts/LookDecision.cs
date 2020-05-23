@@ -21,6 +21,7 @@ public class LookDecision : Decision
             && hit.collider.CompareTag("Player"))
         {
             controller.chaseTarget = hit.transform;
+            controller.navMeshAgent.isStopped = false;
             return true;
         }
         else
